@@ -1,5 +1,18 @@
 # LLM Data Quality Assistant
 
+[![ci](https://github.com/Saigwe/llm-data-quality-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/Saigwe/llm-data-quality-assistant/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
+```mermaid
+flowchart LR
+    A[dbt build] --> B[run_results.json + manifest.json]
+    B --> C[parse: rank failures, map tests to models]
+    C --> D[deterministic markdown report]
+    C --> E[verified facts table] --> F[Claude briefing for data owners]
+    D --> G[report.md + CI exit code]
+    F --> G
+```
+
 Turns a nightly **dbt test run** into a plain-English briefing that business data owners can act on.
 
 After a dbt run, failures sit in `target/run_results.json` as cryptic test IDs. This tool:

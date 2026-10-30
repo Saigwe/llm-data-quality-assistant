@@ -61,6 +61,10 @@ pytest
 
 The tests cover parsing, ranking, test-to-model mapping, the report and CLI exit codes, and the Claude call (with a fake client, so they run offline).
 
+## Walkthrough
+
+- [ ] 3-minute Loom walkthrough ([script ready](docs/walkthrough.md))
+
 ## Stack
 
 Python, Anthropic SDK, dbt artifacts (run_results v6), pytest.

@@ -1,0 +1,10 @@
+{
+  "nodes": {
+    "test.shop.not_null_fct_orders_customer_id.8a3f1": {"depends_on": {"nodes": ["model.shop.fct_orders"]}},
+    "test.shop.relationships_fct_orders_customer_id__customer_id__ref_dim_customers_.c91b2": {"depends_on": {"nodes": ["model.shop.dim_customers", "model.shop.fct_orders"]}},
+    "test.shop.unique_dim_customers_customer_id.2d7e0": {"depends_on": {"nodes": ["model.shop.dim_customers"]}},
+    "test.shop.accepted_values_fct_orders_status__placed__shipped__returned.f02c4": {"depends_on": {"nodes": ["model.shop.fct_orders"]}},
+    "test.shop.source_freshness_raw_payments.4b11a": {"depends_on": {"nodes": ["model.shop.stg_payments"]}},
+    "test.shop.not_null_dim_customers_country.77aa9": {"depends_on": {"nodes": ["model.shop.dim_customers"]}}
+  }
+}

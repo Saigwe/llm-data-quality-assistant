@@ -1,0 +1,12 @@
+{
+  "metadata": {"dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json", "dbt_version": "1.12.6", "generated_at": "2026-10-30T06:02:11Z"},
+  "results": [
+    {"unique_id": "model.shop.fct_orders", "status": "success", "failures": null, "message": "OK", "execution_time": 4.21},
+    {"unique_id": "test.shop.not_null_fct_orders_customer_id.8a3f1", "status": "fail", "failures": 1342, "message": "Got 1342 results, configured to fail if != 0", "execution_time": 0.48},
+    {"unique_id": "test.shop.relationships_fct_orders_customer_id__customer_id__ref_dim_customers_.c91b2", "status": "fail", "failures": 87, "message": "Got 87 results, configured to fail if != 0", "execution_time": 0.62},
+    {"unique_id": "test.shop.unique_dim_customers_customer_id.2d7e0", "status": "pass", "failures": 0, "message": null, "execution_time": 0.31},
+    {"unique_id": "test.shop.accepted_values_fct_orders_status__placed__shipped__returned.f02c4", "status": "warn", "failures": 12, "message": "Got 12 results, configured to warn if != 0", "execution_time": 0.27},
+    {"unique_id": "test.shop.source_freshness_raw_payments.4b11a", "status": "error", "failures": 0, "message": "Database Error: table raw.payments not found", "execution_time": 0.05},
+    {"unique_id": "test.shop.not_null_dim_customers_country.77aa9", "status": "pass", "failures": 0, "message": null, "execution_time": 0.22}
+  ]
+}
